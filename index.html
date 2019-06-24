@@ -31,17 +31,45 @@
       top: 0;
       width: 100vw;
     }
+    .front>* {
+      max-width: 900px;
+      margin: 0 auto;
+    }
     .banner {
       text-align: center;
       gbackground: #000;
       color: #ff2a2a;
       padding: 1em;
     }
+    .banner>div {
+      padding-top: 1em;
+      padding-bottom: 1em;
+      background: blue;
+      background: linear-gradient(-40deg, rgba(0,204,255,1) 0%, rgba(201,215,251,1) 31%, rgba(0,211,255,1) 100%);
+    }
+    .banner img {
+      display: block;
+    }
 
     :root {
       --outline-color: #00dcff;
     }
-
+    .projects>div {
+      text-align: center;
+      margin-left: 1em;
+      margin-right: 1em;
+    }
+    .projects>div:not(:first-child) {
+      margin-top: 1em;
+    }
+    .projects img {
+      width: 100%;
+      display: inline-block;
+      background-size: 500px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      box-shadow:	0px 0px 8px 2px #000;
+    }
 
     .banner>h1 {
       font-size: 10vw;
@@ -97,21 +125,6 @@
            -4.3px   9.0px 0.02px var(--outline-color),
             7.9px   6.1px 0.02px var(--outline-color);
     }
-    .projects>div {
-      margin: 1em;
-      text-align: center;
-    }
-    .projects a {
-    }
-    .projects img {
-      width: 500px;
-      max-width: calc(100vw - 2em);
-      display: inline-block;
-      background-size: 500px;
-      background-repeat: no-repeat;
-      background-position: center center;
-      box-shadow:	0px 0px 8px 2px #000;
-    }
 
     @media (max-width: 600px) {
       body {
@@ -128,7 +141,7 @@
   <body>
 <canvas></canvas>
 <div class="front">
-  <div class="banner"><h1>gfx fundamentals</h1></div>
+  <div class="banner"><div><img src="resources/banner.svg"></div></div>
   <div class="projects">
     <div><a href="https://threejsfundamentals.org"><img src="https://threejsfundamentals.org/threejs/lessons/resources/threejsfundamentals.jpg"></a></div>
     <div><a href="https://webglfundamentals.org"  ><img src="https://webglfundamentals.org/webgl/lessons/resources/webglfundamentals.jpg">      </a></div>
